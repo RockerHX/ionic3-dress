@@ -1,17 +1,51 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>首页</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+  <ion-row *ngIf="spinner">
+    <ion-col text-center>
+      <ion-spinner></ion-spinner>
+    </ion-col>
+  </ion-row>
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides" (click)="goDetails(slide)">
+      <img src="{{slide.PictUrl}}" alt="">
+      <div class="cover"></div>
+      <span class="title">{{slide.Title}}</span>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="categories">
+    <ion-grid>
+      <ion-row wrap>
+        <ion-col text-center tappable col-3 *ngFor="let category of categories" (click)="goDetails(category)">
+          <i class="iconfont {{category.Icon}} icon"></i>
+          <span class="title">{{category.FavoritesTitle}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-item-divider class="t-header" color="light">
+    年会礼服2017年新款
+  </ion-item-divider>
+
+  <div class="product">
+    <ion-row>
+      <ion-col tappable col-6 *ngFor="let product of products" (click)="goDetails(product)">
+        <img src="{{product.PictUrl}}" alt="">
+        <p>{{product.Title}}</p>
+        <div class="list-price buy">
+          <span class="price-new"><i>￥</i>{{product.ZkFinalPrice}}</span>
+          <i class="del">￥<span>{{product.ReservePrice}}</span></i>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
 </ion-content>
