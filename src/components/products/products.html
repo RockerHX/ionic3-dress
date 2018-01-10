@@ -1,0 +1,13 @@
+<!-- Generated template for the ProductsComponent component -->
+<div class="product">
+  <ion-row wrap>
+    <ion-col tappable col-6 *ngFor="let product of products" (click)="goDetails(product)">
+      <img src="{{product.PictUrl}}">
+      <p>{{product.Title}}</p>
+      <div class="list-price buy">
+        <span class="price-new"><i>￥</i>{{product.ZkFinalPrice}}</span>
+        <i class="del">￥<span>{{product.ReservePrice}}</span></i>
+      </div>
+    </ion-col>
+  </ion-row>
+</div>

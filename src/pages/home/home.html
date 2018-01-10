@@ -35,17 +35,6 @@
     年会礼服2017年新款
   </ion-item-divider>
 
-  <div class="product">
-    <ion-row>
-      <ion-col tappable col-6 *ngFor="let product of products" (click)="goDetails(product)">
-        <img src="{{product.PictUrl}}" alt="">
-        <p>{{product.Title}}</p>
-        <div class="list-price buy">
-          <span class="price-new"><i>￥</i>{{product.ZkFinalPrice}}</span>
-          <i class="del">￥<span>{{product.ReservePrice}}</span></i>
-        </div>
-      </ion-col>
-    </ion-row>
-  </div>
+  <products [products]="products"></products>
 
 </ion-content>
