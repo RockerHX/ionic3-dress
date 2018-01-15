@@ -32,10 +32,10 @@ export class AppGlobal {
 @Injectable()
 export class AppProvider {
 
-  constructor(public http: Http,
- public loadingController: LoadingController,
-  private alertController: AlertController,
-  private toastController: ToastController) { }
+    constructor(public http: Http,
+    public loadingController: LoadingController,
+    private alertController: AlertController,
+    private toastController: ToastController) { }
 
     // 对参数进行编码
     encode(params) {
