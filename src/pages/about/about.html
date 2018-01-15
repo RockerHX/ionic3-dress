@@ -1,11 +1,22 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar style="opacity: 0.8" no-border-bottom color="primary">
     <ion-title>
-      About
+      个人中心
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content fullscreen>
+
+  <ion-list>
+    <!-- <ion-item *ngFor="let item of items" (click)="itemClick(item)">
+      {{item.title}}
+    </ion-item> -->
+
+    <!-- button带动画 -->
+    <button ion-item *ngFor="let item of items" (click)="itemClick(item)">
+      {{item.title}}
+    </button>
+  </ion-list>
 
 </ion-content>
