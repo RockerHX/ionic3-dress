@@ -23,7 +23,7 @@
   <div class="categories">
     <ion-grid>
       <ion-row wrap>
-        <ion-col text-center tappable col-3 *ngFor="let category of categories" (click)="goDetails(category)">
+        <ion-col text-center tappable col-3 *ngFor="let category of categories" (click)="goProductList(category)">
           <i class="iconfont {{category.Icon}} icon"></i>
           <span class="title">{{category.FavoritesTitle}}</span>
         </ion-col>

@@ -63,5 +63,9 @@ export class HomePage {
   goDetails(item) {
     console.log('go details...')
   }
+  
+  goProductList(item) {
+    this.navCtrl.push('ProductListPage', { item: item });
+ }
 
 }
