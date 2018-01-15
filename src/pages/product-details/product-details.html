@@ -28,8 +28,8 @@
     <h1>{{selectedItem.Title}}</h1>
   </div>
 
-  <button ion-button full primary>去抢购</button>
-  
+  <button ion-button full primary (click)="goBuy()">去抢购</button>
+
   <div *ngFor="let img of imgs">
     <img src="{{img}}" alt="">
   </div>

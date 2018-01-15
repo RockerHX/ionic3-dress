@@ -19,7 +19,6 @@ export class ProductsComponent {
   }
 
   goDetails(item) {
-    console.log("sb");
     this.navCtrl.push('ProductDetailsPage', { item: item });
   }
 

@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
+import { ThemeableBrowser } from '@ionic-native/themeable-browser';
 
 import { MyApp } from './app.component';
 
@@ -26,7 +27,8 @@ import { AppProvider } from '../providers/app/app';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AppProvider
+    AppProvider,
+    ThemeableBrowser
   ]
 })
 export class AppModule {}
